@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body{ 
+    background: black;
+    overflow: hidden;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.social-container img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.buttons-container{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 22px;
+}
+
+.buttons-container img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.caio-image{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.caio-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 4px red;
+}
+
+.youtube-btn, .tiktok-btn, .whatsapp-btn{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color:black;
+    border-radius: 25px;
+    height: 50px;
+    width: 432px;
+    justify-content: center;
+    box-shadow: 0px 0px 18px 1px red;
+    cursor: pointer;
+}
+
+.youtube-btn:hover, .tiktok-btn:hover, .whatsapp-btn:hover{
+    animation-name: wobble-skew;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: top left, bottom right, top right, bottom left;
+}
+
+
+@keyframes wobble-skew{
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        transform: translate3d(-1%, 0, 0) skewX(12deg);
+    }
+    50% {
+        transform: translate3d(1%, 0, 0) skewX(-12deg);
+    }
+    25% {
+        transform: translate3d(-1%, 0, 0) skewX(12deg);
+    }
+}
+
+@media only screen and (max-width:768px){
+    .youtube-btn, .tiktok-btn, .whatsapp-btn{
+        width: 350px;
+        padding-block: 5px;
+    }
+
+
+}
+.tiktok-btn img{
+    margin-left: -45px;
+
+}
+.youtube-btn img{
+    margin-left: -10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
